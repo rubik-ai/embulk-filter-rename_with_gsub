@@ -65,22 +65,3 @@ module Embulk
 
   end
 end
-
-module Embulk
-  module Filter
-    class RenameWithGsub
-      class Searcher
-        def self.search_index(in_schema, key_name)
-          in_schema.each do |column|
-            if column["name"] == key_name
-              index = column["index"].to_i
-              return index
-            else
-              return nil
-            end
-          end
-        end
-      end
-    end
-  end
-end
