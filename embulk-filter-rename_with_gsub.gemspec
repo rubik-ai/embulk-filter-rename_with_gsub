@@ -7,14 +7,15 @@ Gem::Specification.new do |spec|
   spec.description   = "Rename With Gsub"
   spec.email         = ["sesame@purplemoon.org"]
   spec.licenses      = ["MIT"]
-  # TODO set this: spec.homepage      = "https://github.com/sesame/embulk-filter-rename_with_gsub"
+  spec.homepage      = "https://github.com/sesame/embulk-filter-rename_with_gsub"
 
-  spec.files         = `git ls-files`.split("\n") + Dir["classpath/*.jar"]
+  spec.files         = `git ls-files`.split("\n")
   spec.test_files    = spec.files.grep(%r{^(test|spec)/})
   spec.require_paths = ["lib"]
 
   #spec.add_dependency 'YOUR_GEM_DEPENDENCY', ['~> YOUR_GEM_DEPENDENCY_VERSION']
-  spec.add_development_dependency 'embulk', ['>= 0.8.8']
+  spec.add_development_dependency 'embulk', ['>= 0.8.9']
   spec.add_development_dependency 'bundler', ['>= 1.10.6']
   spec.add_development_dependency 'rake', ['>= 10.0']
+  spec.add_development_dependency 'embulk-parser-regexp', ['> 1.2.1']
 end

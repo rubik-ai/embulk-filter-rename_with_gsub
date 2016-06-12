@@ -1,0 +1,34 @@
+in:
+  type: file
+  path_prefix: ./sample_data/sample
+  parser:
+    charset: UTF-8
+    newline: LF
+    type: regexp
+
+    regexp:
+      \A(?<hoge-hoge>\d)(?<foo>\d)(?<bar-bar>\d)\Z
+    use_undefined: true
+    use_raw: false
+    use_timestamp: true
+
+filters:
+  - filter:
+    type: rename_with_gsub
+    rename_regexp: "-"
+    replacement: " "
+      
+  - filter:
+    type: rename_with_gsub
+    rename_regexp: \s
+    replacement: "/"
+          
+  - filter:
+    type: rename_with_gsub
+    rename_regexp: bar
+    replacement: bread
+
+out:
+  type: stdout
+  
+  

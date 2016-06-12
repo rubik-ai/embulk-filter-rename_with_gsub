@@ -1,3 +1,4 @@
+Copyright (c) 20016 sesame
 
 MIT License
 
