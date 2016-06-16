@@ -1,7 +1,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "embulk-filter-rename_with_gsub"
-  spec.version       = "0.1.0"
+  spec.version       = "0.1.1"
   spec.authors       = ["sesame"]
   spec.summary       = "Rename With Gsub filter plugin for Embulk"
   spec.description   = "Rename With Gsub"
