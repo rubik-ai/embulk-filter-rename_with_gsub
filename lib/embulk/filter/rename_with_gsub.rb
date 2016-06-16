@@ -1,11 +1,12 @@
 module Embulk
   module Filter
-
     class RenameWithGsub < FilterPlugin
       Plugin.register_filter("rename_with_gsub", self)
 
       def self.transaction(config, in_schema, &control)
         # configuration code:
+
+        
         task = {
           "option1" => config.param("option1", :integer),                     # integer, required
           "option2" => config.param("option2", :string, default: "myvalue"),  # string, optional
@@ -24,10 +25,7 @@ module Embulk
       end
 
       def init
-        # initialization code:
-        @option1 = task["option1"]
-        @option2 = task["option2"]
-        @option3 = task["option3"]
+        
       end
 
       def close
@@ -35,9 +33,8 @@ module Embulk
 
       def add(page)
         # filtering code:
-        add_columns = ["example",1,1.0]
         page.each do |record|
-          page_builder.add(record + add_columns)
+          page_builder.add(record)
         end
       end
 
