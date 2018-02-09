@@ -51,7 +51,7 @@ column3 name: bar-bar
 
 ## Install
 ```
-$ embukl gem install embulk-filter-rename_with_gsub
+$ embulk gem install embulk-filter-rename_with_gsub
 ```
 
 ## Preview
