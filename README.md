@@ -8,7 +8,7 @@
 
 ## Configuration
 
-- **rename_regexp**: regexp of gsug(Regexp.compile(regexp), replacement)
+- **rename_regexp**: regexp of gsub(Regexp.compile(regexp), replacement)
 
   If you would like to specify backslash espace (for instance "\s"), remove double quote.
 
